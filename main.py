@@ -3,7 +3,7 @@ from data import *
 from classes import *
 
 def main():
-    book = load_contacts()
+    book = load_data()
 
     print("Welcome to the assistant bot!")
     while True:
@@ -11,7 +11,7 @@ def main():
         command, args = parse_input(user_input)
 
         if command in ["close", "exit"]:
-            save_contacts(book)
+            save_data(book)
             print("Good bye!")
             break
 
